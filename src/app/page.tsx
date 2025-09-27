@@ -4,6 +4,7 @@ import { Product, producdDB } from './db';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Swal from 'sweetalert2';
 
 // fonte
 const montserratFont = Montserrat({
@@ -14,6 +15,24 @@ const montserratFont = Montserrat({
 export default function Home() {
   // estado tipado
   const [product, setProduct] = useState<Product[]>([]);
+
+  function infoProduct() {
+    try {
+      Swal.fire({
+        icon: 'info',
+        title: 'Informações',
+        text: `Desenvolvido por CoddeX Developer`,
+      })
+    } catch (error) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Erro ao buscar dados!',
+        text: `Um erro aconteceu ${error}`,
+        timerProgressBar: true,
+        timer: 2000
+      })
+    }
+  }
 
   useEffect(() => {
     setProduct(producdDB);
@@ -40,9 +59,7 @@ export default function Home() {
             <p>{item.description}</p>
             <h4>{item.descriptionPrice}</h4>
             <div className="buttons-card">
-              <Link href={item.infoProduct}>
-                <button className='button-info'>Saiba mais</button>
-              </Link>
+              <button onClick={() => { infoProduct() }} className='button-info'>Saiba mais</button>
               <Link href={item.price}>
                 <button className='button-payment'>Comprar</button>
               </Link>
