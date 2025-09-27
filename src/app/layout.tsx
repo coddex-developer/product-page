@@ -1,4 +1,4 @@
-import "./styles.min.css"
+import "./styles.min.scss"
 export default function RootLayout({
   children,
 }: Readonly<{
