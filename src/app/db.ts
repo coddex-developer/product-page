@@ -18,7 +18,7 @@ export const producdDB: Product[] = [
         description:
             "Super finos e rápidos para você trabalhar, jogar ou onde quer que vá.",
         infoProduct: "#",
-        descriptionPrice: "A partir de 1descriptionP R$916,18 ou R$10.994,00 à vista",
+        descriptionPrice: "A partir de 12x R$916,18 ou R$10.994,00 à vista",
         infoPayment: "#",
         price: ""
     },
@@ -29,7 +29,7 @@ export const producdDB: Product[] = [
         chipset: "M3, M3 PRO ou M3 PRO-MAX",
         description: "Os notebooks Mac mais avançados para usos pesados.",
         infoProduct: "#",
-        descriptionPrice: "A partir de 10x de R$1218,51 ou R$12.185,00",
+        descriptionPrice: "A partir de 10x R$1218,51 ou R$12.185,00",
         infoPayment: "#",
         price: ""
     },
